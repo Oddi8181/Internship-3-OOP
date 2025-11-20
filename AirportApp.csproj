@@ -46,6 +46,7 @@
     <Compile Include="AirportProgram.cs" />
     <Compile Include="Menus\FlightMenu.cs" />
     <Compile Include="Menus\PassengerMenu.cs" />
+    <Compile Include="Menus\PlaneMenu.cs" />
     <Compile Include="Models\Crew.cs" />
     <Compile Include="Models\CrewMember.cs" />
     <Compile Include="Models\Flight.cs" />
@@ -55,8 +56,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\FlightRepo.cs" />
     <Compile Include="Repository\PassengerRepo.cs" />
+    <Compile Include="Repository\PlaneRepo.cs" />
     <Compile Include="Services\FlightService.cs" />
     <Compile Include="Services\PassengerService.cs" />
+    <Compile Include="Services\PlaneService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

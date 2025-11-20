@@ -19,6 +19,55 @@ namespace ConsoleApp1.Menus
             Console.WriteLine("PRIKAZ SVIH LETOVA");
             FlightService.ShowAllFlights();
         }
+
+        public void SearchFlightById()
+        {
+            Console.WriteLine("Unesi ID leta za pretragu: ");
+            var id = Guid.Parse(Console.ReadLine());
+            var flight = FlightService.SearchFlightById(id);
+            Console.WriteLine(flight);
+        }
+        public void SearchFlight()
+        {
+            Console.WriteLine("Pretraga letova:");
+            Console.WriteLine("1 - Pretraga po ID-u");
+            Console.WriteLine("2 - Pretraga po imenu");
+            var choice = Console.ReadLine();
+            switch (choice)
+            {
+                case "1":
+                    SearchFlightById();
+                    break;
+                case "2":
+                    SearchFlightByName();
+                    break;
+            }
+        }
+        public void SearchFlightByName()
+        {
+            Console.WriteLine("Unesi ime leta za pretragu: ");
+            var name = Console.ReadLine();
+            var flight = FlightService.SearchFlightByName(name);
+            Console.WriteLine(flight);
+        }
+        public void EditFlight()
+        {
+            Console.WriteLine("Unesi ID leta za uređivanje: ");
+            var id = Guid.Parse(Console.ReadLine());
+            Console.WriteLine("Unesi novi datum polaska: ");
+            var departureDate = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("Unesi novi datum dolaska: ");
+            var arrivalDate = DateTime.Parse(Console.ReadLine());
+            FlightService.UpdateFlight(departureDate, arrivalDate, id);
+        }
+
+        public void DeleteFlight()
+        {
+            Console.WriteLine("Unesi ID leta za brisanje: ");
+            var id = Guid.Parse(Console.ReadLine());
+            FlightService.RemoveFlight(id);
+        }
+
         public void AddFlight()
         {
             Console.WriteLine("Unesi mjesto poljetanja: ");
@@ -54,12 +103,16 @@ namespace ConsoleApp1.Menus
                     ShowAllFlights();
                     break;
                 case "2":
+                    AddFlight();
                     break;
                 case "3":
+                    SearchFlight();
                     break;
                 case "4":
+                    EditFlight();
                     break;
                 case "5":
+                    DeleteFlight();
                     break;
                 case "6":
                     break;

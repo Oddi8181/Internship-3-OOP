@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace ConsoleApp1.Services
         public FlightRepo FlightRepo;
         public FlightService(FlightRepo flightRepo) 
         {
-            FlightRepo = flightRepo;
+            this.FlightRepo = flightRepo;
         }
         public void ShowAllFlights()
         {
@@ -29,9 +30,10 @@ namespace ConsoleApp1.Services
             FlightRepo.AddFlight(flight);
         }
 
-        public void RemoveFlight(Flight flight)
+        public void RemoveFlight(Guid id)
         {
-            if(flight.getAvailableSeats() == flight.getTotalSeats() / 2)
+            var flight = FlightRepo.GetFlightById(id);
+            if (flight.getAvailableSeats() == flight.getTotalSeats() / 2)
             {
                 throw new Exception("Cannot remove flight with booked seats.");
             }
@@ -60,6 +62,17 @@ namespace ConsoleApp1.Services
             FlightRepo.UpdateFlight(departureDate, arrivalDate, id);
         }
 
+        public List<Flight> GetAvailableFlights()
+        {
+            return FlightRepo.GetAvailableFlights();
+        }
+        public Flight BookingFlight(Guid id)
+        {
+            var flight = FlightRepo.GetFlightById(id);
+            var newAvailableSeats = flight.getAvailableSeats() - 1;
+            FlightRepo.UpdateAvailableSeats(id, newAvailableSeats);
+            return flight;
+        }
 
 
 

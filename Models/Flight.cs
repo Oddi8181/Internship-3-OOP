@@ -20,6 +20,7 @@ namespace ConsoleApp1
         int AvailableSeats { get; set; }
         int TotalSeats { get; set; }
         DateTime CreationDate { get; set; }
+        public Plane plane { get; set; }
         public List<Guid> PassengerIds { get; }
         public FlightCategory FlightCategory { get; set; }
 

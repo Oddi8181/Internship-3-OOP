@@ -10,6 +10,7 @@ namespace ConsoleApp1.Repository
     {
        
         public readonly List<Flight> _flights = new List<Flight>();
+    
         public FlightRepo() { }
 
         public void AddFlight(Flight flight)
@@ -26,6 +27,10 @@ namespace ConsoleApp1.Repository
         {
             return _flights.FirstOrDefault(f => f.getId() == id);
         }
+        public Flight GetFlightByName(string name)
+        {
+            return _flights.FirstOrDefault(f => f.getName() == name);
+        }
 
         public void RemoveFlight(Flight flight)
         {
@@ -41,13 +46,16 @@ namespace ConsoleApp1.Repository
         {
             var flight = GetFlightById(id);
             flight.setDepartureDate(departureDate);
-            flight.setArrivalDate(arrivalDate); 
+            flight.setArrivalDate(arrivalDate);
             flight.setCreationDate(DateTime.Now);
         }
-        public Flight GetFlightByName(string name)
+
+        public void UpdateAvailableSeats(Guid id, int newSeatCount)
         {
-            return _flights.FirstOrDefault(f => f.getName() == name);
+            var flight = GetFlightById(id);
+            flight.setAvailableSeats(newSeatCount);
         }
+
 
 
     }

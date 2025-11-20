@@ -1,10 +1,13 @@
 ﻿using AirportApp.Models;
 using AirportApp.Services;
+using ConsoleApp1;
+using ConsoleApp1.Models;
 using ConsoleApp1.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -60,9 +63,10 @@ namespace AirportApp.Menus
         public static void ChooseFlightMenu(Passenger passenger)
         {
             Console.WriteLine("----- ODABIR LETA -----");
-            foreach(var fight in freeFlights)
+            var availableFlights = _flightService.GetAvailableFlights();
+            foreach (var flight in availableFlights)
             {
-                Console.WriteLine(flight);
+                Console.WriteLine(flight.ToString());
             }
             Console.Write("Unesite ID leta koji želite odabrati: ");
             Guid flightId;
@@ -71,6 +75,26 @@ namespace AirportApp.Menus
                 Console.Write("Neispravan format ID-a. Molimo unesite ispravan ID leta: ");
             }
             _passengerService.ChooseFlight(passenger, flightId);
+            var bookedFlight = _flightService.BookingFlight(flightId);
+            Console.WriteLine("Odaberi kategoriju na letu: ");
+            Console.WriteLine("1 - Ekonomska");
+            Console.WriteLine("2 - Poslovna");
+            Console.WriteLine("3 - Prva klasa");
+            Console.Write("Unesite vašu odabranu kategoriju: ");
+            string categoryChoice = Console.ReadLine();
+            switch (categoryChoice)
+            {
+                case "1":
+                    bookedFlight.FlightCategory = FlightCategory.Economy;
+                    break;
+                case "2":
+                    bookedFlight.FlightCategory = FlightCategory.Business;
+                    break;
+                case "3":
+                    bookedFlight.FlightCategory = FlightCategory.FirstClass;
+                    break;
+            }
+            Console.WriteLine("Let uspješno rezerviran!");
         }
         public void ViewMyFlightsMenu(Passenger passenger)
         {
@@ -134,6 +158,18 @@ namespace AirportApp.Menus
                     }
                     break;
                 case "b":
+                    Console.Write("Unesite naziv leta: ");
+                    string flightName = Console.ReadLine();
+                    var flightByName = _flightService.SearchFlightByName(flightName);
+                    if (flightByName != null)
+                    {
+                        Console.WriteLine(flightByName);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Let s tim nazivom nije pronađen.");
+                    }
+                    break;
 
             }
         }
