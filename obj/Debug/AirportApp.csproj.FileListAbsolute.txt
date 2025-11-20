@@ -1,0 +1,4 @@
+C:\Ivan Odrljin\Projekti\Dump\Domaci2\AirportApp\obj\Debug\AirportApp.csproj.AssemblyReference.cache
+C:\Ivan Odrljin\Projekti\Dump\Domaci2\AirportApp\obj\Debug\AirportApp.csproj.CoreCompileInputs.cache
+C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\obj\Debug\AirportApp.csproj.AssemblyReference.cache
+C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\obj\Debug\AirportApp.csproj.CoreCompileInputs.cache

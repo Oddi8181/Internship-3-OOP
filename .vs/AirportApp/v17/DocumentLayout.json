@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Ivan Odrljin\\Projekti\\Dump\\Domaci2\\ConsoleApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA77CA1A-05B9-43F8-B953-FEC7C134EC85}|AirportApp.csproj|c:\\ivan odrljin\\projekti\\dump\\domaci2\\consoleapp1\\menus\\flightmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA77CA1A-05B9-43F8-B953-FEC7C134EC85}|AirportApp.csproj|solutionrelative:menus\\flightmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA77CA1A-05B9-43F8-B953-FEC7C134EC85}|AirportApp.csproj|c:\\ivan odrljin\\projekti\\dump\\domaci2\\consoleapp1\\services\\flightservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA77CA1A-05B9-43F8-B953-FEC7C134EC85}|AirportApp.csproj|solutionrelative:services\\flightservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA77CA1A-05B9-43F8-B953-FEC7C134EC85}|AirportApp.csproj|c:\\ivan odrljin\\projekti\\dump\\domaci2\\consoleapp1\\repository\\flightrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA77CA1A-05B9-43F8-B953-FEC7C134EC85}|AirportApp.csproj|solutionrelative:repository\\flightrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA77CA1A-05B9-43F8-B953-FEC7C134EC85}|AirportApp.csproj|c:\\ivan odrljin\\projekti\\dump\\domaci2\\consoleapp1\\models\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA77CA1A-05B9-43F8-B953-FEC7C134EC85}|AirportApp.csproj|solutionrelative:models\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA77CA1A-05B9-43F8-B953-FEC7C134EC85}|AirportApp.csproj|c:\\ivan odrljin\\projekti\\dump\\domaci2\\consoleapp1\\repository\\passengerrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA77CA1A-05B9-43F8-B953-FEC7C134EC85}|AirportApp.csproj|solutionrelative:repository\\passengerrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA77CA1A-05B9-43F8-B953-FEC7C134EC85}|AirportApp.csproj|c:\\ivan odrljin\\projekti\\dump\\domaci2\\consoleapp1\\airportprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA77CA1A-05B9-43F8-B953-FEC7C134EC85}|AirportApp.csproj|solutionrelative:airportprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FlightMenu.cs",
+              "DocumentMoniker": "C:\\Ivan Odrljin\\Projekti\\Dump\\Domaci2\\ConsoleApp1\\Menus\\FlightMenu.cs",
+              "RelativeDocumentMoniker": "Menus\\FlightMenu.cs",
+              "ToolTip": "C:\\Ivan Odrljin\\Projekti\\Dump\\Domaci2\\ConsoleApp1\\Menus\\FlightMenu.cs",
+              "RelativeToolTip": "Menus\\FlightMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T12:00:14.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FlightService.cs",
+              "DocumentMoniker": "C:\\Ivan Odrljin\\Projekti\\Dump\\Domaci2\\ConsoleApp1\\Services\\FlightService.cs",
+              "RelativeDocumentMoniker": "Services\\FlightService.cs",
+              "ToolTip": "C:\\Ivan Odrljin\\Projekti\\Dump\\Domaci2\\ConsoleApp1\\Services\\FlightService.cs",
+              "RelativeToolTip": "Services\\FlightService.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAwAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T11:58:53.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FlightRepo.cs",
+              "DocumentMoniker": "C:\\Ivan Odrljin\\Projekti\\Dump\\Domaci2\\ConsoleApp1\\Repository\\FlightRepo.cs",
+              "RelativeDocumentMoniker": "Repository\\FlightRepo.cs",
+              "ToolTip": "C:\\Ivan Odrljin\\Projekti\\Dump\\Domaci2\\ConsoleApp1\\Repository\\FlightRepo.cs",
+              "RelativeToolTip": "Repository\\FlightRepo.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:53:55.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Flight.cs",
+              "DocumentMoniker": "C:\\Ivan Odrljin\\Projekti\\Dump\\Domaci2\\ConsoleApp1\\Models\\Flight.cs",
+              "RelativeDocumentMoniker": "Models\\Flight.cs",
+              "ToolTip": "C:\\Ivan Odrljin\\Projekti\\Dump\\Domaci2\\ConsoleApp1\\Models\\Flight.cs",
+              "RelativeToolTip": "Models\\Flight.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwCAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:41:26.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PassengerRepo.cs",
+              "DocumentMoniker": "C:\\Ivan Odrljin\\Projekti\\Dump\\Domaci2\\ConsoleApp1\\Repository\\PassengerRepo.cs",
+              "RelativeDocumentMoniker": "Repository\\PassengerRepo.cs",
+              "ToolTip": "C:\\Ivan Odrljin\\Projekti\\Dump\\Domaci2\\ConsoleApp1\\Repository\\PassengerRepo.cs",
+              "RelativeToolTip": "Repository\\PassengerRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:54:09.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AirportProgram.cs",
+              "DocumentMoniker": "C:\\Ivan Odrljin\\Projekti\\Dump\\Domaci2\\ConsoleApp1\\AirportProgram.cs",
+              "RelativeDocumentMoniker": "AirportProgram.cs",
+              "ToolTip": "C:\\Ivan Odrljin\\Projekti\\Dump\\Domaci2\\ConsoleApp1\\AirportProgram.cs",
+              "RelativeToolTip": "AirportProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T08:40:50.438Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
