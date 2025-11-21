@@ -44,19 +44,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AirportProgram.cs" />
+    <Compile Include="Menus\CrewMenu.cs" />
     <Compile Include="Menus\FlightMenu.cs" />
     <Compile Include="Menus\PassengerMenu.cs" />
     <Compile Include="Menus\PlaneMenu.cs" />
     <Compile Include="Models\Crew.cs" />
     <Compile Include="Models\CrewMember.cs" />
+    <Compile Include="Models\CrewRole.cs" />
     <Compile Include="Models\Flight.cs" />
     <Compile Include="Models\FlightCategory.cs" />
+    <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\Passenger.cs" />
     <Compile Include="Models\Plane.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CrewRepo.cs" />
     <Compile Include="Repository\FlightRepo.cs" />
     <Compile Include="Repository\PassengerRepo.cs" />
     <Compile Include="Repository\PlaneRepo.cs" />
+    <Compile Include="Services\CrewService.cs" />
     <Compile Include="Services\FlightService.cs" />
     <Compile Include="Services\PassengerService.cs" />
     <Compile Include="Services\PlaneService.cs" />

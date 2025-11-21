@@ -28,7 +28,7 @@ namespace ConsoleApp1
 
 
 
-        public Flight(string origin, string destination, DateTime departureDate, DateTime arrivalDate, DateTime travelTime, int totalSeats)
+        public Flight(string origin, string destination, DateTime departureDate, DateTime arrivalDate, DateTime travelTime, Plane plane)
         {
             Id = new Guid();
             Origin = origin;
@@ -37,8 +37,8 @@ namespace ConsoleApp1
             DepartureDate = departureDate;
             ArrivalDate = arrivalDate;
             TravelTime = travelTime;
-            TotalSeats = totalSeats;
-            AvailableSeats = totalSeats - countOfBookedSeats();
+            TotalSeats = plane.getCapacity();
+            AvailableSeats = TotalSeats - countOfBookedSeats();
             CreationDate = DateTime.Now;
         }
         public Guid getId() { return Id; }

@@ -9,9 +9,12 @@ namespace ConsoleApp1.Repository
     internal class FlightRepo
     {
        
-        public readonly List<Flight> _flights = new List<Flight>();
+        public readonly List<Flight> _flights;
     
-        public FlightRepo() { }
+        public FlightRepo()
+        { 
+            _flights = new List<Flight>();
+        }
 
         public void AddFlight(Flight flight)
         {
