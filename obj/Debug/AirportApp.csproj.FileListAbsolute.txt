@@ -7,4 +7,3 @@ C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\bin\Debug\ConsoleApp1.exe
 C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
 C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
-C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\obj\Debug\ConsoleApp1.exe.config

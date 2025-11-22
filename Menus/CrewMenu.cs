@@ -11,9 +11,11 @@ namespace ConsoleApp1.Menus
     internal class CrewMenu
     {
         public CrewService service;
-        public CrewMenu(CrewService crewService)
+        public FlightService flightService;
+        public CrewMenu(CrewService crewService, FlightService flightService)
         {
             service = crewService;
+            this.flightService = flightService;
         }
 
         public void CreateCrewMenu()
@@ -28,6 +30,7 @@ namespace ConsoleApp1.Menus
             var attendant1Id = Guid.Parse(Console.ReadLine());
             Console.WriteLine("Unesite ID stjuardese 2:");
             var attendant2Id = Guid.Parse(Console.ReadLine());  
+            flightService.ShowAllFlights();
             Console.WriteLine("Unesite ID leta za koji kreirate posadu:");
             var flightId = Guid.Parse(Console.ReadLine());
 

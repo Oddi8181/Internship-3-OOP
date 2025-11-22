@@ -45,7 +45,7 @@ namespace ConsoleApp1
             _passengerMenu = new PassengerMenu(_passengerService, _flightService);
             _flightMenu = new FlightMenu(_flightService);
             _planeMenu = new PlaneMenu(_planeService);
-            _crewMenu = new CrewMenu(_crewService);
+            _crewMenu = new CrewMenu(_crewService, _flightService);
         }
 
 
