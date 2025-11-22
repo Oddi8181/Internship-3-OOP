@@ -13,13 +13,20 @@ namespace ConsoleApp1
         DateTime YearOfProduction;
         int NumberOfFlights;
         int Capacity;
+        public List<Guid> FlightIds;
 
-        public Plane(string name, DateTime yearOfProduction, int numberOfFlights, int capacity)
+        public Plane(string name, DateTime yearOfProduction, int capacity)
         {
-            id = new Guid();
+            id = Guid.NewGuid();
             Name = name;
             YearOfProduction = yearOfProduction;
-            NumberOfFlights = numberOfFlights;
+            if(FlightIds != null)
+            {
+                foreach (var flight in FlightIds)
+                {
+                    NumberOfFlights++;
+                }
+            }
             Capacity = capacity;
         }
 

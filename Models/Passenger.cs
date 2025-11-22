@@ -22,6 +22,7 @@ namespace AirportApp.Models
  
         public Passenger(string name, string surname, DateTime dateOfBirth, string email, string password)
         {
+            FligtIds = new List<Guid>();
             Id = Guid.NewGuid();
             this.Name = name;
             this.Surname = surname;

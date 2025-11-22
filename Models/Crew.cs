@@ -10,18 +10,16 @@ namespace ConsoleApp1.Models
     internal class Crew
     {
         Guid Id;
-        Flight Flight { get; set; }
+        public List<Guid> FlightIds { get; set; }
         public List<CrewMember> Members { get; set; }
-        public Crew(List<CrewMember> members,Flight flight)
+        public Crew(List<CrewMember> members)
         {
             Members = members;
-            Id = new Guid();
-            this.Flight = flight;
+            Id = Guid.NewGuid();
         }
-        public Flight getFlight() { return Flight; }
-        public Guid getId() { return Id; }
-        public void setFlight(Flight flight) { Flight = flight; }
-
+        public Crew() { }
+        
+        
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

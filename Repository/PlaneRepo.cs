@@ -12,6 +12,11 @@ namespace ConsoleApp1.Repository
         public PlaneRepo()
         {
             planes = new List<Plane>();
+
+            planes.Add( new Plane("Boeing 737",new DateTime(2001), 180));
+            planes.Add(new Plane("Airbus A380",new DateTime(2005), 220));
+
+           
         }
         public void AddPlane(Plane plane)
         {
@@ -38,6 +43,17 @@ namespace ConsoleApp1.Repository
                 planes.Remove(plane);
             }
         }
+        public void AddFlightToPlane(Guid planeId, Guid flightId)
+        {
+            var plane = GetPlaneById(planeId);
+            if (plane != null)
+            {
+                plane.FlightIds.Add(flightId);
+                plane.setNumberOfFlights(plane.getNumberOfFlights() + 1);
+            }
+        }
+
+
 
     }
 }

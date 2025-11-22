@@ -13,6 +13,11 @@ namespace AirportApp.Repository
         public PassengerRepo()
         {
             _passengers = new List<Passenger>();
+
+            
+            _passengers.Add(new Passenger("Marko", "Marić", new DateTime(1998, 2, 5), "marko@mail.com", "pass123"));
+            _passengers.Add(new Passenger("Ana", "Anić", new DateTime(2000, 1, 10), "ana@mail.com", "lozinka"));
+            _passengers.Add(new Passenger("Ivan", "Ivić", new DateTime(1995, 5, 20), "ivan@mail.com", "test321"));
         }
 
         public void AddPassenger(Passenger passenger)
@@ -37,6 +42,7 @@ namespace AirportApp.Repository
         public void AddFlightToPassenger(Passenger passenger, Guid flightId)
         {
             passenger.FligtIds.Add(flightId);
+
         }
         public void RemoveFlightFromPassenger(Passenger passenger, Guid flightId)
         {

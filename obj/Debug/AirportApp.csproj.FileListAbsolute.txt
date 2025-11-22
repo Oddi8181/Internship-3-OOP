@@ -2,3 +2,9 @@ C:\Ivan Odrljin\Projekti\Dump\Domaci2\AirportApp\obj\Debug\AirportApp.csproj.Ass
 C:\Ivan Odrljin\Projekti\Dump\Domaci2\AirportApp\obj\Debug\AirportApp.csproj.CoreCompileInputs.cache
 C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\obj\Debug\AirportApp.csproj.AssemblyReference.cache
 C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\obj\Debug\AirportApp.csproj.CoreCompileInputs.cache
+C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\Ivan Odrljin\Projekti\Dump\Domaci2\ConsoleApp1\obj\Debug\ConsoleApp1.exe.config

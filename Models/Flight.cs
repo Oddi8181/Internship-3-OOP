@@ -16,21 +16,23 @@ namespace ConsoleApp1
         DateTime DepartureDate { get; set; }
         DateTime ArrivalDate { get; set; }
 
-        DateTime TravelTime { get; set; }
+        TimeSpan TravelTime { get; set; }
         int AvailableSeats { get; set; }
         int TotalSeats { get; set; }
+        Guid CrewId { get; set; }
         DateTime CreationDate { get; set; }
-        public Plane plane { get; set; }
+        public Plane Plane { get; set; }
         public List<Guid> PassengerIds { get; }
+        
         public FlightCategory FlightCategory { get; set; }
 
         
 
 
 
-        public Flight(string origin, string destination, DateTime departureDate, DateTime arrivalDate, DateTime travelTime, Plane plane)
+        public Flight(string origin, string destination, DateTime departureDate, DateTime arrivalDate, TimeSpan travelTime, Plane plane)
         {
-            Id = new Guid();
+            Id = Guid.NewGuid();
             Origin = origin;
             Destination = destination;
             Name = "Let u" + destination;
@@ -38,8 +40,11 @@ namespace ConsoleApp1
             ArrivalDate = arrivalDate;
             TravelTime = travelTime;
             TotalSeats = plane.getCapacity();
+            PassengerIds = new List<Guid>();
             AvailableSeats = TotalSeats - countOfBookedSeats();
             CreationDate = DateTime.Now;
+            Plane = plane;
+            
         }
         public Guid getId() { return Id; }
         public string getOrigin() { return Origin; }
@@ -47,10 +52,10 @@ namespace ConsoleApp1
         public string getName() { return Name; }
         public DateTime getDepartureDate() { return DepartureDate; }
         public DateTime getArrivalDate() { return ArrivalDate; }
-        public DateTime getTravelTime() { return TravelTime; }
+        public TimeSpan getTravelTime() { return TravelTime; }
         public int getAvailableSeats() { return AvailableSeats; }
         public int getTotalSeats() { return TotalSeats; }
-
+        public Guid getCrewId() { return CrewId; }
         public void setAvailableSeats(int seats) { AvailableSeats = seats; }
         public void setTotalSeats(int seats) { TotalSeats = seats; }
 
@@ -58,8 +63,8 @@ namespace ConsoleApp1
         public void setDestination(string destination) { Destination = destination; }
         public void setDepartureDate(DateTime departureDate) { DepartureDate = departureDate; }
         public void setArrivalDate(DateTime arrivalDate) { ArrivalDate = arrivalDate; }
-        public void setTravelTime(DateTime travelTime) { TravelTime = travelTime; }
-
+        public void setTravelTime(TimeSpan travelTime) { TravelTime = travelTime; }
+        public void setCrewId(Guid crewId) { CrewId = crewId; }
 
         public DateTime getCreationDate() { return CreationDate; }
         public void setCreationDate(DateTime creationDate) { CreationDate = creationDate; }
@@ -72,7 +77,9 @@ namespace ConsoleApp1
         }
         public int countOfBookedSeats()
         {
-            return PassengerIds.Count;
+            int cnt = PassengerIds.Count;
+            
+            return cnt;
         }
     }
 }

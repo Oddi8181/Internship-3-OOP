@@ -45,7 +45,7 @@ namespace ConsoleApp1
 
         public override string ToString()
         {
-            return $"{Name} {Surname} - {Role}, {Gender}, Born on {DateOfBirth.ToShortDateString()}";
+            return $"{id} {Name} {Surname} - {Role}, {Gender}, Born on {DateOfBirth.ToShortDateString()}";
         }
 
     }

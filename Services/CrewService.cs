@@ -36,10 +36,21 @@ namespace ConsoleApp1.Services
             }
 
         }
+        public void AddCrewToFlight(Guid crewId, Guid flightId)
+        {
+            
+            if (_crewRepo.DoesCrewExistForFlight(flightId))
+            {
+                Console.WriteLine("A crew is already assigned to this flight.");
+                return;
+            }
+            _crewRepo.AddFlight(_crewRepo.GetCrewById(crewId), flightId);
+        }
+
         public void CreateCrew(Guid pilotId,Guid copilotId, Guid flightAttendant1Id, Guid flightAttendant2Id, Guid flightId)
         {
-            var flight = _flightRepo.GetFlightById(flightId);
-            if (DoesCrewExistForFlight(flight))
+            
+            if (_crewRepo.DoesCrewExistForFlight(flightId))
             {
                 Console.WriteLine("A crew is already assigned to this flight.");
                 return;
@@ -51,13 +62,13 @@ namespace ConsoleApp1.Services
 
             List<CrewMember> members = new List<CrewMember>() { pilot, copilot, flightAttendant1, flightAttendant2 };
             foreach (var member in members) {
-                if (_crewRepo.IsCrewMemberAssignedToFlight(member, flight))
+                if (_crewRepo.IsCrewMemberAssignedToFlight(member, flightId))
                 {
                     Console.WriteLine($"Crew member {member.getName()} {member.getSurname()} is already assigned to this flight.");
                     return;
                 }
             }
-            _crewRepo.CreateCrew(members, flight);
+            _crewRepo.CreateCrew(members);
         }
 
         public void AddCrewMember(string name, string surname, CrewRole role, DateTime dateOfBirth, Gender gender)
@@ -66,19 +77,7 @@ namespace ConsoleApp1.Services
             _crewRepo.AddCrewMember(newMember);
         }
 
-        public bool DoesCrewExistForFlight(Flight flight)
-        {
-            var crews = _crewRepo.GetAllCrews();
-            foreach (var crew in crews)
-            {
-                if (crew.getFlight() == flight)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
+      
 
     }
 }

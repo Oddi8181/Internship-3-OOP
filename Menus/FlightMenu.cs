@@ -79,11 +79,11 @@ namespace ConsoleApp1.Menus
             Console.WriteLine("Unesi datum dolaska");
             var arrivalDate = DateTime.Parse(Console.ReadLine());
             Console.WriteLine("Unesi vrijeme putovanja");
-            var travelTime = DateTime.Parse(Console.ReadLine());
-            Console.WriteLine("Unesi ukupan broj sjedala");
-            var totalSeats = int.Parse(Console.ReadLine());
+            var travelTime = TimeSpan.Parse(Console.ReadLine());
+            Console.WriteLine("Unesi unesi id aviona");
+            var planeId = Guid.Parse(Console.ReadLine());
 
-            FlightService.AddFlight(origin, destination, departureDate, arrivalDate, travelTime, totalSeats);
+            FlightService.AddFlight(origin, destination, departureDate, arrivalDate, travelTime, planeId);
         }
         public void ShowFlightsMenu()
         {

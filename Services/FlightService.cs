@@ -11,9 +11,11 @@ namespace ConsoleApp1.Services
     internal class FlightService
     {
         public FlightRepo FlightRepo;
-        public FlightService(FlightRepo flightRepo) 
+        public PlaneRepo PlaneRepo;
+        public FlightService(FlightRepo flightRepo, PlaneRepo planeRepo) 
         {
             this.FlightRepo = flightRepo;
+            this.PlaneRepo = planeRepo;
         }
         public void ShowAllFlights()
         {
@@ -24,10 +26,12 @@ namespace ConsoleApp1.Services
             }
 
         }
-        public void AddFlight(string origin, string destination, DateTime departureDate, DateTime arrivalDate, DateTime travelTime, int totalSeats)
+        public void AddFlight(string origin, string destination, DateTime departureDate, DateTime arrivalDate, TimeSpan travelTime, Guid planeId)
         {
-            var flight = new Flight(origin, destination, departureDate, arrivalDate, travelTime, totalSeats);
+            var plane = PlaneRepo.GetPlaneById(planeId);
+            var flight = new Flight(origin, destination, departureDate, arrivalDate,travelTime, plane);
             FlightRepo.AddFlight(flight);
+            PlaneRepo.AddFlightToPlane(planeId, flight.getId());
         }
 
         public void RemoveFlight(Guid id)

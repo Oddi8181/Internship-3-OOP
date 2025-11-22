@@ -61,6 +61,7 @@
     <Compile Include="Repository\FlightRepo.cs" />
     <Compile Include="Repository\PassengerRepo.cs" />
     <Compile Include="Repository\PlaneRepo.cs" />
+    <Compile Include="Run.cs" />
     <Compile Include="Services\CrewService.cs" />
     <Compile Include="Services\FlightService.cs" />
     <Compile Include="Services\PassengerService.cs" />

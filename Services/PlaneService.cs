@@ -23,7 +23,7 @@ namespace ConsoleApp1.Services
         }
         public void AddPlane(string name, DateTime yearOfProduction, int numberOfFlights, int capacity)
         {
-            var plane = new Plane(name, yearOfProduction, numberOfFlights, capacity);
+            var plane = new Plane(name, yearOfProduction, capacity);
             PlaneRepo.AddPlane(plane);
         }
 

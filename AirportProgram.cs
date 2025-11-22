@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ namespace AirportApp
 
         static void Main(string[] args)
         {
+            Run run = new Run();
+            run.MainMenu();
         }
     }
 }
